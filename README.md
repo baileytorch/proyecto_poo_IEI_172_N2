@@ -1,4 +1,4 @@
-# proyecto_poo_iec_170_n2
+# proyecto_poo_IEI_172_N2
 
 Proyecto desarrollo modular de POO
 
