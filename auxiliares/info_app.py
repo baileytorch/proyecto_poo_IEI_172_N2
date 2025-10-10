@@ -1,1 +1,1 @@
-nombre_aplicacion = 'Gestión Zoológico'
+nombre_aplicacion = 'Gestión Taller'

@@ -93,8 +93,8 @@ CREATE TABLE IF NOT EXISTS clientes (
 
 CREATE TABLE IF NOT EXISTS combustibles(
     id INT AUTO_INCREMENT,
-    tipo_combustible VARCHAR(25),
-    descripcion_tipo_combustible VARCHAR(255),
+    tipo_combustible VARCHAR(25) NOT NULL,
+    descripcion_tipo_combustible VARCHAR(255) NULL,
 
     CONSTRAINT pk_combustible PRIMARY KEY (id)
 );
@@ -128,8 +128,8 @@ CREATE TABLE IF NOT EXISTS tipos_vehiculo(
 
 CREATE TABLE IF NOT EXISTS vehiculos (
     id INT AUTO_INCREMENT,
-    anio_vehiculo CHAR(4) NULL,
-    patente_vehiculo CHAR(7) NULL,
+    anio_vehiculo CHAR(4) NOT NULL,
+    patente_vehiculo CHAR(7) NOT NULL,
     color_vehiculo VARCHAR(25) NOT NULL,
     habilitado TINYINT NOT NULL DEFAULT 1,
     modelo_vehiculo INT NOT NULL,

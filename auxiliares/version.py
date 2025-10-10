@@ -17,5 +17,6 @@ PATCH: Se incrementa cuando se corrigen errores o se hacen
 
 # Historial
 #   02.10.2025  : Inicio del proyecto (v1.0.0)
+#   09.10.2025  : Cambio de proyecto (v1.1.0)
 
-numero_version = '1.0.0'
+numero_version = '1.1.0'

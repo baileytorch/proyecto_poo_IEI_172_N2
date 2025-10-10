@@ -1,3 +1,5 @@
-from iu.menu_principal import menu_principal
+from iu.menu_principal import menu_principal, seleccionar_opcion
 
-menu_principal()
+while True:
+    menu_principal()
+    seleccionar_opcion()
