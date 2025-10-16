@@ -5,6 +5,7 @@
 #     seleccionar_opcion()
 from modelos.comuna import Comuna
 from modelos.marca import Marca
+from modelos.tipo_mecanico import TipoMecanico
 from datos.obtener_datos import obtener_lista_objetos
 from datos.guardar_datos import guardar_marca
 from negocio.negocio_marca import obtener_marca_nombre
@@ -24,6 +25,18 @@ def trabajo_comunas():
                 [comuna.id, comuna.codigo_comuna, comuna.nombre_comuna])
             # print(f'{comuna.id} {comuna.codigo_comuna} {comuna.nombre_comuna}')
         print(tabla_comunas)
+
+
+def trabajo_tipos_mecanico():
+    tabla_tipos_mecanico = PrettyTable()
+    tabla_tipos_mecanico.field_names = ['N°', 'Tipo Mecánico', 'Descripción']
+    listado_tipos_mecanico = obtener_lista_objetos(TipoMecanico)
+    if listado_tipos_mecanico:
+        for tipo_mecanico in listado_tipos_mecanico:
+            tabla_tipos_mecanico.add_row(
+                [tipo_mecanico.id, tipo_mecanico.tipo_mecanico, tipo_mecanico.descripcion_tipo_mecanico])
+            # print(f'{marca.id} {marca.nombre_marca} {marca.pais_origen}')
+        print(tabla_tipos_mecanico)
 
 
 def trabajo_marcas():
@@ -64,7 +77,8 @@ def buscar_comuna():
 
 
 # trabajo_comunas()
+trabajo_tipos_mecanico()
 # trabajo_marcas()
 # buscar_marca()
 # buscar_comuna()
-guardar_marca()
+# guardar_marca()
