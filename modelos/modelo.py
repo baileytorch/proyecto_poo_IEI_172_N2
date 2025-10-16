@@ -11,3 +11,4 @@ class Modelo(Base):
     descripcion_modelo = Column(String(255), nullable=True)
     tipo_combustible = Column(Integer, nullable=False)
     puertas = Column(Integer, nullable=False)
+    id_marca = Column(Integer, nullable=False)
