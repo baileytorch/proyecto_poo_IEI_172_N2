@@ -18,5 +18,6 @@ PATCH: Se incrementa cuando se corrigen errores o se hacen
 # Historial
 #   02.10.2025  : Inicio del proyecto (v1.0.0)
 #   09.10.2025  : Cambio de proyecto (v1.1.0)
+#   06.11.2025  : Agregamos métodos de gestión de comunas (v1.2.0)
 
-numero_version = '1.1.0'
+numero_version = '1.2.0'

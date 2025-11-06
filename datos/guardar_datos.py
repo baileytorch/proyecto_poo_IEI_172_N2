@@ -1,23 +1,13 @@
-from datos.conexion import Session
+from datos.conexion import sesion
 from sqlalchemy import func
-from modelos.comuna import Comuna
-from modelos.marca import Marca
-from modelos.modelo import Modelo
-
-sesion = Session()
+from modelos import Marca, Modelo
 
 
-def guardar_comuna():
-    nombre = input('Ingrese nombre comuna: ')
-    codigo = input('Ingrese código de comuna: ')
-    nueva_comuna = Comuna(
-        nombre_comuna=nombre.title(),
-        codigo_comuna=codigo)
-    sesion.add(nueva_comuna)
+def crear_objeto(objeto):
+    sesion.add(objeto)
     try:
         sesion.commit()
-        print(
-            f"La comuna '{nueva_comuna.nombre_marca}' se ha guardado correctamente.")
+        print("El objeto se ha guardado correctamente.")
     except Exception as e:
         sesion.rollback()
         print(f"Error al guardar la comuna: {e}")
