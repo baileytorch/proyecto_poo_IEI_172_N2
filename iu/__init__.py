@@ -1,2 +1,2 @@
-from .menus import menu_principal,menu_trabajos,menu_configuracion,sub_menu_comunas
-from .pedir_datos import datos_comuna,datos_marca
+from .menus import menu_principal,menu_trabajos,menu_configuracion,sub_menu_comunas,sub_menu_marcas
+from .pedir_datos import str_nombre_comuna,str_codigo_comuna,str_nuevo_nombre_comuna,str_nuevo_codigo_comuna,datos_marca,str_nombre_marca,str_pais_origen,str_nuevo_nombre_marca,str_nuevo_pais_origen

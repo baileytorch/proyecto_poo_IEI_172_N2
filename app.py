@@ -1,7 +1,8 @@
-from iu import menu_principal, menu_trabajos, menu_configuracion, datos_marca, sub_menu_comunas
+from iu import menu_principal, menu_trabajos, menu_configuracion, datos_marca, sub_menu_comunas,sub_menu_marcas
 from datos.guardar_datos import guardar_marca
-from negocio import obtener_listado_comunas,crear_comuna
+from negocio import obtener_listado_comunas,crear_comuna,modificar_comuna,obtener_listado_marcas,crear_marca,modificar_marca,eliminar_marca
 from auxiliares import nombre_aplicacion, numero_version
+from rut_chile import rut_chile
 
 # Definición de constantes literales para menú
 seleccionar_opcion = 'Seleccione su opción [0-4]: '
@@ -50,7 +51,7 @@ while True:
                     elif opcion_comuna == '2':
                         crear_comuna()
                     elif opcion_comuna == '3':
-                        pass
+                        modificar_comuna()
                     elif opcion_comuna == '4':
                         pass
                     elif opcion_comuna == '0':
@@ -64,6 +65,23 @@ while True:
                 pass
             elif opcion_configuracion == '4':
                 pass
+            elif opcion_configuracion == '5':
+                while True:
+                    sub_menu_marcas()
+                    opcion_marcas = input(seleccionar_opcion)
+                    if opcion_marcas == '1':
+                        obtener_listado_marcas()
+                    elif opcion_marcas=='2':
+                        crear_marca()
+                    elif opcion_marcas=='3':
+                        modificar_marca()
+                    elif opcion_marcas == '4':
+                        eliminar_marca()
+                    elif opcion_marcas == '0':
+                        print('Volviendo al menú configuración...')
+                        break
+                    else:
+                        print(opcion_incorrecta)
             elif opcion_configuracion == '0':
                 print(volver_menu_principal)
                 break

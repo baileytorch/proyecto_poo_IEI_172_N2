@@ -1,7 +1,8 @@
-from datos.conexion import sesion
+from datos.conexion import Session
 from sqlalchemy import func
 from modelos import Marca, Modelo
 
+sesion=Session()
 
 def crear_objeto(objeto):
     sesion.add(objeto)
@@ -10,10 +11,20 @@ def crear_objeto(objeto):
         print("El objeto se ha guardado correctamente.")
     except Exception as e:
         sesion.rollback()
-        print(f"Error al guardar la comuna: {e}")
+        print(f"Error al guardar el objeto: {e}")
     finally:
         sesion.close()
 
+def modificar_objeto(objeto):
+    sesion.merge(objeto)
+    try:
+        sesion.commit()
+        print("El objeto se ha guardado correctamente.")
+    except Exception as e:
+        sesion.rollback()
+        print(f"Error al guardar el objeto: {e}")
+    finally:
+        sesion.close()
 
 def guardar_marca(marca, pais):
     if marca != '':

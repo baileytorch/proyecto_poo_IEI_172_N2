@@ -1,1 +1,2 @@
-from .negocio_comuna import obtener_listado_comunas,obtener_comuna_nombre,crear_comuna
+from .negocio_comuna import obtener_listado_comunas,obtener_comuna_nombre,crear_comuna,modificar_comuna
+from .negocio_marca import obtener_listado_marcas,obtener_marca_nombre,crear_marca,modificar_marca,eliminar_marca

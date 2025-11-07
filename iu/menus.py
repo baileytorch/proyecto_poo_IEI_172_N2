@@ -37,6 +37,7 @@ def menu_configuracion():
     print('[2] Horarios Taller.')
     print('[3] Gestión Proveedores.')
     print('[4] Gestión Repuestos.')
+    print('[5] Gestión Marcas.')
     print(opcion_volver)
 
 
@@ -49,5 +50,17 @@ def sub_menu_comunas():
     print('[2] Agregar Comuna.')
     print('[3] Modificar Comuna.')
     print('[4] Eliminar Comuna.')
+    print(opcion_volver)
+
+
+def sub_menu_marcas():
+    print()
+    print(separador_menu)
+    print('Sub-Menú Gestión Marcas')
+    print(separador_menu)
+    print('[1] Listado Marcas.')
+    print('[2] Agregar Marca.')
+    print('[3] Modificar Marca.')
+    print('[4] Eliminar Marca.')
     print(opcion_volver)
     
