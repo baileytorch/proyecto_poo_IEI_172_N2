@@ -26,25 +26,6 @@ def modificar_objeto(objeto):
     finally:
         sesion.close()
 
-def guardar_marca(marca, pais):
-    if marca != '':
-        nueva_marca = Marca(
-            nombre_marca=marca,
-            pais_origen=pais.title())
-        sesion.add(nueva_marca)
-        try:
-            sesion.commit()
-            print(
-                f"La marca '{nueva_marca.nombre_marca}' se ha guardado correctamente.")
-        except Exception as e:
-            sesion.rollback()
-            print(f"Error al guardar la marca: {e}")
-        finally:
-            sesion.close()
-    else:
-        print('Debe ingresar el nombre de la marca.')
-
-
 def guardar_modelo(modelo, descripcion, combustible, cant_puertas, marca):
     nuevo_modelo = Modelo(
         nombre_modelo=modelo,
